@@ -2,19 +2,22 @@
 #include "dynamicarray.h"
 #include "timer.h"
 
+#define LOG(x) std::cout << x << std::endl
+
 int main() {
     const int MILLION = 1000000;
 
     {
         Timer timer;
-        DynamicArray<int> array;
+        DynamicArray<long> array;
 
-        for (int i = 0; i < MILLION; i++)
+        for (long i = 0; i < (MILLION); i++)
         {
             array.Add(i);
         }
-        std::cout << array.Length() << std::endl;
-        std::cout << array.Get(array.Length() - 1) << std::endl;
+
+        LOG(array.Length());
+        LOG(array.Get(array.Length() - 1));
     }
 
     return 0;

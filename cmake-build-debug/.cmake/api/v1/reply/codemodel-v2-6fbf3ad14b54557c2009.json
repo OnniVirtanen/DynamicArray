@@ -6,7 +6,7 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.25"
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "DynamicArray::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-DynamicArray-Debug-400a9faa8d904b24e4b1.json",
+					"jsonFile" : "target-DynamicArray-Debug-273815e25d71da130519.json",
 					"name" : "DynamicArray",
 					"projectIndex" : 0
 				}
@@ -49,12 +49,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/onni/CLionProjects/DynamicArray/cmake-build-debug",
-		"source" : "/home/onni/CLionProjects/DynamicArray"
+		"build" : "C:/Users/35840/CLionProjects/DynamicArray/cmake-build-debug",
+		"source" : "C:/Users/35840/CLionProjects/DynamicArray"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 4
+		"minor" : 5
 	}
 }
