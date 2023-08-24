@@ -16,13 +16,8 @@ public:
     int Length() const;
     DynamicArray();
     bool Contains(T item) const;
-
-    // Copy constructor
     DynamicArray(const DynamicArray<T>& other);
-
-    // Copy assignment operator
     DynamicArray& operator=(DynamicArray<T> other);
-
     ~DynamicArray() { delete[] array; }
 private:
     void Grow();
@@ -71,7 +66,8 @@ void DynamicArray<T>::Grow()
 
     T* newArray = new T[capacity];
 
-    for (int i = 0; i <= top; ++i) {
+    for (int i = 0; i <= top; ++i) 
+    {
         newArray[i] = array[i];
     }
 
@@ -103,7 +99,8 @@ void DynamicArray<T>::Remove(size_t index)
 {
     if (!(index > top))
     {
-        for (int i = index; i < top; ++i) {
+        for (int i = index; i < top; ++i)
+        {
             array[i] = array[i + 1];
         }
         --top;
@@ -122,15 +119,19 @@ void DynamicArray<T>::Remove(size_t index)
 template<typename T>
 void DynamicArray<T>::Shrink()
 {
-    capacity /= 2;
-    T* newArray = new T[capacity];
+    if (top < capacity / 4)
+    {
+        capacity /= 2;
+        T* newArray = new T[capacity];
 
-    for (int i = 0; i <= top; ++i) {
-        newArray[i] = array[i];
+        for (int i = 0; i <= top; ++i) 
+        {
+            newArray[i] = array[i];
+        }
+
+        delete[] array;
+        array = newArray;
     }
-
-    delete[] array;
-    array = newArray;
 }
 
 template<typename T>
@@ -143,6 +144,3 @@ bool DynamicArray<T>::Contains(T item) const
 
     return false;
 }
-
-
-
